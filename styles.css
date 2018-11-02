@@ -1,0 +1,286 @@
+/* zero out margins */
+* 
+{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+/* Formats document so footer can stay at base. */
+html, body 
+{
+	height: 100%;
+	overflow-x: hidden;
+}
+
+/* header and introduction styles */
+#container 
+{
+	position: relative;
+	min-height: 100%;
+}
+.background
+{
+	padding-bottom: 1em;
+	background-image: url(bicycles.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+header 
+{
+	padding: 1em;
+	text-align: center;
+	background-color: rgba(0,0,0,0.80);
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+}
+main 
+{
+	margin: 1.5em 10% 1.5em 10%;
+	padding: 1.5em 5% 1.5em 5%;
+	background-color: rgba(255,255,255,0.90);
+}
+p 
+{
+	padding-bottom: 0.5em;
+	line-height: 1.5em;
+	font-family: "Lucida Sans", sans-serif;
+	font-size: 18px;
+}
+
+/* navigation styles */
+nav 
+{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	padding: 1em;
+	text-align: center;
+	line-height: 1.5em;
+	background-color: white;
+	font-family: "Lucida Sans", "sans-serif";
+	font-size: 18px;
+	border-bottom: thick solid black;
+	border-top: thick solid black;
+}
+nav ul
+{
+	list-style-type: none;
+}
+nav ul li
+{
+	display: inline;
+	padding: 1em 5% 1em 5%;
+	width: 20%;
+}
+a:link
+{
+	color: #229498;
+}
+a:hover 
+{
+	color: #fddd62;
+}
+a:active
+{
+	color: #fddd62;
+}
+a:visited
+{
+	color: #799a46;
+}
+
+/* statistics styles; formatted in a three-colomn layout. */
+.column 
+{
+	float: left;
+	width: 33.33%;
+	text-align: center;
+}
+#stats:after 
+{
+	content: "";
+	display: table;
+	clear: both;
+}
+h2 
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 28px;
+	padding: 1em;
+}
+
+/* chart styles */
+#charts 
+{
+	margin: 2em 0 2em 0;
+	padding-bottom: 4em;
+}
+.left
+{
+	float: left;
+	width: 30%;
+	margin-right: 2em;
+}
+.right
+{
+	float: right;
+	width: 30%;
+	margin-right: 2em;
+}
+.chart 
+{
+	margin: 4em;
+	padding: 1.5em;
+	border-top: thick solid black;
+}
+.chart:after
+{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* footer styles */
+footer 
+{
+	position: absolute;
+	bottom: 0;
+	width: 98%;
+	height: 1em;
+	text-align: right;
+	background-color: rgba(255,255,255,1.00);
+	padding: 1em 1em 0 1em;
+}
+#source 
+{
+	float: left;
+}
+
+/* responds to smaller browser sizes and mobile */
+@media only screen and (max-width: 1480px)
+{
+	nav ul li 
+	{
+		width: 0;
+		padding: 3em;
+	}
+
+}
+@media only screen and (max-width: 84em) 
+{
+	nav ul li 
+	{
+		width: 0;
+		padding: 2em;
+	}
+}
+@media only screen and (max-width: 74em)
+{
+	nav ul li 
+	{
+		width: 0;
+		padding: 1em;
+	}
+}
+@media only screen and (max-width: 65em)
+{
+	nav ul li 
+	{
+		width: 0;
+		padding: 0.5em;
+	}
+}
+@media only screen and (max-width: 62em)
+{
+	nav ul li 
+	{
+		width: 0;
+		padding: 0.1em;
+	}
+	.left
+	{
+		float: none;
+		width: 50%;
+		margin: auto;
+	}
+	.right 
+	{
+		float: none;
+		width: 50%;
+		margin: auto;
+	}
+	.chart 
+	{
+		margin: 1em;
+	}
+	footer 
+	{
+		width: 97%;
+	}
+}
+@media only screen and (max-width: 60em)
+{
+	nav 
+	{
+		position: relative;
+		padding: 0.5em;
+	}
+	nav ul li 
+	{
+		display: block;
+		width: 100%;
+		padding: 0.3em 0 0.3em 0;
+	}
+	.column 
+	{
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+	footer 
+	{
+		width: 95%;
+		height: 2em;
+	}
+}
+@media only screen and (max-width: 41em) 
+{
+	header 
+	{
+		font-size: 20px;
+	}
+	main 
+	{
+		margin: 0;
+	}
+	.left
+	{
+		float: none;
+		width: 80%;
+		margin: auto;
+	}
+	.right 
+	{
+		float: none;
+		width: 80%;
+		margin: auto;
+	}
+	#source
+	{
+		float: none;
+	}
+}
+@media only screen and (max-width: 480px) 
+{
+	header 
+	{
+		font-size: 12px;
+	}
+	footer 
+	{
+		width: 93%;
+		height: 2em;
+	}
+}

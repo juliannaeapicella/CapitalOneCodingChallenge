@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Bike Sharing in Los Angeles</title>
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+</head>
+
+<!-- This is a one-page website, with links pointing to different sections of the data. -->
+
+<body>
+	<!-- Header and introduction. -->
+	<div id="container">
+	<div class="background">
+		<header><h1>Bike Sharing in Los Angeles</h1></header>
+		<main>
+			<p>Bike shares are becoming increasingly common in cities in the United States. Commuters have been using bike sharing as a method of transportation for the flexibility, cost savings, exercise, and a myriad of other benefits. While being quite successful, many bike shares are still relatively new and have room for optimization. </p>
+			<p>The following analyzes and visualizes bike share data from the city of Los Angeles.</p>
+		</main>
+	</div>
+
+	<!-- Navigation. -->
+	<nav>
+		<ul>
+			<li><a href="#stats">General Statistics</a></li>
+			<li><a href="#BikePasses">Bike Passes and Trip Categories</a></li>
+			<li><a href="#Monthly">Trips per Month</a></li>
+			<li><a href="#Seasonal">Average Trip Length by Season</a></li>
+		</ul>
+	</nav>
+	
+	<!-- Statistics not in charts. Designed for a three-column layout. -->
+	<section id="stats">
+		<div class="column">
+			<h2>Loading...</h2>
+			<p>Regular Users</p>
+		</div>
+		<div class="column">
+			<h2>Loading...</h2>
+			<p>Most Popular Starting Stations</p>
+			<h2>Loading...</h2>
+			<p>Most Popular Ending Stations</p>
+		</div>
+		<div class="column">
+			<h2>Loading...</h2>
+			<p>Average Distance per Trip</p>
+		</div>
+	</section>
+
+	<!-- Charts; each chart is in a separate div for styling, as the Chart.js API overwrites any CSS written directly for the canvas element. -->
+	<section id="charts">
+ 		<section class="chart"> 
+			<div class="left"><canvas id="BikePasses" width="400" height="400"></canvas></div>
+			<div class="chart-desc">
+ 			<p>This chart shows the total instances of each type of pass, as well as the frequency of each trip category.</p>
+ 			<p>Monthly passes are by far the most common pass type, and one-way trips are universally the majority among all passholders.</p>
+ 			</div>
+		</section>  		
+		<section class="chart">
+ 			<div class="right"><canvas id="Monthly" width="400" height="400"></canvas></div>
+ 			<p>This chart shows the total number of trips each month.</p>
+ 			<p>Bike shares are used the most in the fall, and the least in the winter.</p>
+ 		</section>
+ 		<section class="chart">
+ 			<div class="left"><canvas id="Seasonal" width="400" height="400"></canvas></div>
+	 		<p>This chart shows the average ride length per season.</p>
+	 		<p>Rides are typically the shortest in the summer and fall, and the longest in winter and spring.</p>
+		</section>
+ 	</section>
+
+	<!-- Footer. -->
+	<footer><p id="source">Background Image: <a href="https://pixabay.com/en/bicycles-bike-sharing-transport-809728/">Pixabay</a></p><p>Julianna Apicella &vert; jea3348@rit.edu &vert; 2018</p></footer>
+	</div>
+
+	<!-- Loads in script after HTML so as to properly implement the DOM methods. -->
+	<script src="script.js"></script>
+</body>
+</html>
